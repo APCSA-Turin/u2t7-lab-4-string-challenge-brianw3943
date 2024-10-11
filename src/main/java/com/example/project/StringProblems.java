@@ -78,7 +78,20 @@ public class StringProblems{
     // withoutX("xHi") → "Hi"
     // withoutX("Hxix") → "Hxi"
     public String withoutX(String s1){
-        return "";
+        if (s1.substring(0, 1).equals("x")&&(s1.substring(s1.length()-1).equals("x"))) {
+            s1 = s1.substring(1, s1.length()-1);
+        } else { if (s1.substring(0, 1).equals("x")) {
+            s1 = s1.substring(1);
+        } else { if ((s1.substring(s1.length()-1).equals("x"))) {
+            s1 = s1.substring(0, s1.length()-1);
+        } else {
+            
+        }
+            
+        }
+            
+        }
+        return s1;
     }
 
     // Given a string str, if the string starts with "f" return "Fizz".
@@ -89,7 +102,21 @@ public class StringProblems{
     // fizzString("dib") → "Buzz"
     // fizzString("fib") → "FizzBuzz"
     public String fizzString(String s1){
-        return "";
+        if (s1.substring(0, 1).equals("f") && s1.substring(s1.length()-1).equals("b")) {
+            s1 = "FizzBuzz";
+        } else { if (s1.substring(0, 1).equals("f")) {
+            s1 = "Fizz";
+        } else { if (s1.substring(s1.length()-1).equals("b")) {
+            s1 = "Buzz";
+        } else {
+            
+        }
+
+        }
+
+        }
+        
+        return s1;
     }
 
     // Given an int n, return the string form of the number followed 
@@ -102,6 +129,19 @@ public class StringProblems{
     // fizzString2(2) → "2!"
     // fizzString2(3) → "Fizz!"
     public String fizzString2(int x){
-        return "";
+        if (x % 3 == 0 && x % 5 == 0) {
+            return "FizzBuzz!";
+        } else { if (x % 3 == 0) {
+            return "Fizz!";
+        } else { if (x % 5 == 0) {
+            return "Buzz!";
+        } else {
+            return x + "!";
+        }
+            
+        }
+            
+        }
+        
     }
 }
